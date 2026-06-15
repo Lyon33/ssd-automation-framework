@@ -1,0 +1,12 @@
+# 忽略 Python 编译缓存
+__pycache__/
+*.pyc
+
+# 忽略本地虚拟环境（别人下载你的代码会自己创建）
+venv/
+.pytest_cache/
+
+# 忽略本地测试生成的 Excel 脏数据（保留 logs 文件夹本身）
+logs/*.xlsx
+logs/*.xml
+!logs/.gitkeep

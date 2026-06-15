@@ -1,0 +1,12 @@
+target_drive: "/tmp/mock_ssd_io_"
+timeout_limit: 10
+pcie_address: "0000:01:00.0"
+fio_settings:
+  block_sizes:
+    - "4k"
+    - "128k"
+  queue_depths:
+    - 1
+    - 4
+    - 16
+    - 32
