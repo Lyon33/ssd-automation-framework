@@ -6,10 +6,7 @@
 
 An enterprise-grade, highly decoupled SSD system-level automation test framework designed for NVMe/SATA storage reliability and performance verification. Features FTL defect injection, SPOR (Sudden Power Off Recovery) simulation, and automated quality control reporting.
 
-对齐大厂量产标准的 SSD 系统级自动化测试框架。采用多文件高度解耦架构，内嵌 FTL 缺陷拦截矩阵与自适应热插拔断电（SPOR）仿真时序，自动输出量产级品控评估报告。
-
----
-
+对齐大厂量产标准的 SSD 系统级自动化测试框架。采用多文件高度解耦架构，内嵌 FTL 缺陷拦截矩阵与自适应热插拔断电（SPOR）仿真时序，自动输出量产级品控评估报告。 ---
 ## 🚀 Key Features (核心特性)
 
 - **FIO Automation Runner**: Object-oriented encapsulation of industry-standard FIO tool, supporting 16-grid parametric performance boundary testing (Read/Write × Block Size × QD1-32).
@@ -49,7 +46,7 @@ An enterprise-grade, highly decoupled SSD system-level automation test framework
 
 ```bash
 # Clone the repository
-git clone https://github.com
+git clone https://github.com/Lyon33/ssd-automation-framework.git
 cd ssd-automation-test-framework
 
 # Setup environment
