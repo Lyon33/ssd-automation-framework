@@ -20,6 +20,9 @@ def generate_production_report(data_bucket):
     # 严格死卡：如果一行记录中的 TestCase 包含空值，或者 Test_Suite、Case_Name 全是空值，直接物理抹除该行，不留任何白色断层
     df = df[df['TestCase'].notna() & (df['Test_Suite'] != 'N/A') & (df['Case_Name'] != 'N/A')]
 
+    if 'status' in df.columns:
+        df = df.drop(columns=['status'])
+
     # 填充缺失值为合理默认值
     df = df.fillna({
         'Test_Suite': 'N/A',
@@ -38,7 +41,7 @@ def generate_production_report(data_bucket):
     desired_order = [
         'Timestamp', 'TestCase', 'Test_Suite', 'Case_Name', 'Status',
         'Duration(s)', 'SMART_Temp(°C)', 'Wear_Leveling(%)', 'Media_Errors',
-        'status', 'error_code', 'error_msg', 'iops', 'latency_ms'
+        'error_code', 'error_msg', 'iops', 'latency_ms'
     ]
     # 只保留存在的列，并按推荐顺序排列
     existing_cols = [col for col in desired_order if col in df.columns]
